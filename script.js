@@ -1,19 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log("JS cargado correctamente");
 
+    // Animación de visibilidad en secciones al hacer scroll
+    const sections = document.querySelectorAll("section, .fade-in");
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 console.log("Mostrando sección:", entry.target.id);
-                entry.target.classList.remove("hidden"); // Elimina la clase que oculta
-                entry.target.classList.add("visible", "animate"); // Aplica las animaciones
+                entry.target.classList.add("visible", "animate");
+                entry.target.classList.remove("hidden");
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll(".fade-in").forEach(section => {
+    }, { threshold: 0.3 });
+    
+    sections.forEach(section => {
         observer.observe(section);
+    });
+
+    // Animación de barra de progreso en resume.html
+    const progressBars = document.querySelectorAll(".progress");
+    progressBars.forEach(bar => {
+        bar.style.width = bar.getAttribute("data-width");
     });
 
     // Botón de cambio de tema
@@ -25,11 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
     themeToggle.addEventListener("click", () => {
         document.body.classList.toggle("light-mode");
         document.body.classList.toggle("dark-mode");
-        if (document.body.classList.contains("light-mode")) {
-            themeToggle.textContent = "☀️";
-        } else {
-            themeToggle.textContent = "🌙";
-        }
+        themeToggle.textContent = document.body.classList.contains("light-mode") ? "☀️" : "🌙";
     });
 });
-

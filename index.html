@@ -7,67 +7,34 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <h1 class="title">🌟 Mi Portafolio</h1>
-        <ul class="nav-links">
-            <li><a href="#about">Sobre mí</a></li>
-            <li><a href="#projects">Proyectos</a></li>
-            <li><a href="#contact">Contacto</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html">Sobre mí</a></li>
+                <li><a href="resume.html">Resumen</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+            </ul>
+        </nav>
+    </header>
     
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="overlay"></div>
-        <h2 class="hero-title">Hola, soy <span>Jozicleia Lopes</span></h2>
-        <h3 class="hero-text">Frontend Developer.</h3>
-        <p>HTML5 | CSS3 | Caja flexible | Diseño de cuadrícula | Sass/SCSS | JavaScript | API REST| NGP</p>
-        <h3>Backend</h3>
-        <p>Node.js</p>
-        <h3>Habilidades</h3>
-        <p>Trabajo en equipo | Comunicación | Resolución de problemas | Creatividad | Aprendizaje rápido</p>
-        <a href="#projects" class="btn">Ver Proyectos</a>
-    </section>
-    
-    <!-- Sobre mí -->
-    <section id="about" class="section fade-in hidden">
-        <h3 class="section-title">Sobre Mí</h3>
-        <p class="section-text">Soy un desarrollador frontend junior apasionado por el diseño interactivo y las interfaces dinámicas. Disfruto creando soluciones web accesibles y funcionales. He realizado cursos profesionales donde adquirí mis primeras habilidades prácticas. Soy una persona de rápido aprendizaje, organizada y detallista, apasionada por el crecimiento profesional. Busco un puesto en una empresa donde pueda aplicar mis habilidades y conocimientos a proyectos reales estando rodeado de especialistas para que intercambiemos ideas y experiencias para un crecimiento mutuo.</p>
-    </section>
-
-    <!-- Descargar CV -->
-    <section id="resume" class="section fade-in hidden">
-        <h3 class="section-title">Descargar Curriculum</h3>
-        <p class="section-text">Descarga mi CV en formato PDF para conocer más sobre mi experiencia y habilidades.</p>
-        <a href="files/Cv_Jozicleia.pdf" download class="btn">Descargar CV</a>
-    </section>
-
-    
-    <!-- Proyectos -->
-    <section id="projects" class="projects-section fade-in hidden">
-        <h3 class="section-title">Proyectos Creativos</h3>
-        <div class="projects-container">
-            <div class="project-card">
-                <h4>Proyecto 1</h4>
-                <p>Descripción breve del proyecto.</p>
-                <a href="https://github.com/cleialopes/multimarcas">Ver más</a>
+    <div class="content-wrapper">
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>JOZICLEIA <span>LOPES</span></h1>
+                <p>Frontend Developer</p>
+                <p>HTML5 | CSS3 | Caja flexible | Diseño de cuadrícula | Sass/SCSS | JavaScript | API REST| NGP</p>
+                <h3>Backend</h3>
+                <p>Node.js</p>
+                <h3>Habilidades</h3>
+                <p>Trabajo en equipo | Comunicación | Resolución de problemas | Creatividad | Aprendizaje rápido</p>
+                <div class="buttons">
+                    <a href="resume.html" class="btn">Resume</a>
+                    <a href="proyectos.html" class="btn">Proyectos</a>
+                </div>
             </div>
-            <div class="project-card">
-                <h4>Proyecto 2</h4>
-                <p>Interfaz interactiva con efectos visuales únicos.</p>
-                <a href="#">Ver más</a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Contacto -->
-    <section id="contact" class="section fade-in hidden">
-        <h3 class="section-title">Contáctame</h3>
-        <p class="section-text">¿Tienes un proyecto en mente? ¡Hablemos!</p>
-        <a href="mailto:tucorreo@email.com" class="btn">Enviar Email</a>
-    </section>
+        </section>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
-
