@@ -1,15 +1,22 @@
 /* Estilos generales */
 body {
-    /* overflow: hidden; */
     height: 100%;
     font-family: 'Poppins', sans-serif;
     color: white;
     background: #111;
-    /* scroll-behavior: smooth; */
     display: flex;
     flex-direction: column;
-    /* min-height: 100vh; */
     margin: 0;
+}
+
+/* Secciones generales */ 
+section {
+    transform: translateY(15px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+section.visible {
+    transform: translateY(0);
 }
 
 /* Estilos del header y navegación */
@@ -22,28 +29,34 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
+    padding: 10px;
 }
+
 nav {
     display: flex;
     align-items: center;
     padding: 15px;
 }
+
 nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
     padding: 0;
 }
+
 nav a {
     text-decoration: none;
     color: white;
     font-size: 16px;
     transition: color 0.3s, transform 0.3s ease-in-out;
 }
+
 nav a:hover {
     color: #00aaff;
     transform: scale(1.1);
 }
+
 .contact-info {
     font-size: 16px;
     padding: 15px;
@@ -57,8 +70,7 @@ nav a:hover {
     margin-left: 5px;
 }
 
-
-/* Estilos de la sección Hero en index.html */
+/* Estilos de la sección Hero en index */
 .hero {
     height: 100vh;
     display: flex;
@@ -69,6 +81,7 @@ nav a:hover {
     animation: fadeIn 1.5s ease-in-out;
     overflow: hidden;
 }
+
 .hero::before {
     content: "";
     position: absolute;
@@ -81,23 +94,27 @@ nav a:hover {
     filter: brightness(40%); 
     z-index: -1;
 }
+
 .hero-content {
     position: relative;
     z-index: 1;
     width: 80%;
     max-width: 700px;
 }
+
 .hero-content img{
     max-width: 40px; 
     height: auto;
     vertical-align: middle;
    
 }
+
 .hero h1 {
     font-size: 50px;
     margin: 0;
     font-weight: bold;
 }
+
 .hero span {
     color: #00aaff;
 }
@@ -109,6 +126,7 @@ nav a:hover {
     gap: 10px;
     justify-content: center;
 }
+
 .btn {
     padding: 8px 20px;
     border: 2px solid white;
@@ -119,27 +137,14 @@ nav a:hover {
     border-radius: 5px;
     transition: all 0.3s;
 }
+
 .btn:hover {
     background: #00aaff;
     border-color: #00aaff;
 }
 
-/* Secciones generales */
-section {
-    padding: 60px 20px;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(15px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 /* Estilos de About */
 .about-container {
-    flex: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -148,33 +153,35 @@ section.visible {
     margin: auto;
     position: relative;
 }
+
 .about-header {
     position: absolute;
-    top: 70px;
+    top: 90px;
     left: 20px;
-    text-align: left;
 }
+
 .about-text {
     flex: 1;
     max-width: 50%;
 }
+
 .about-text p {
     font-size: 16px;
     line-height: 1.6;
     text-align: justify;
 }
+
 .about-container img {
     max-width: 400px;
     height: auto;
-    margin: 50px 0 0 0;
+    margin: 120px 0 0 0;
     border-radius: 20px;
-    margin-left: 20px;
 }
+
 .about-location {
     position: absolute;
     bottom: 50px;
     left: 47%;
-    transform: translateX(-50%);
     text-align: center;
     font-size: 18px;
     font-weight: bold;
@@ -182,16 +189,20 @@ section.visible {
 
 /* Estilos de Resume */
 .resume {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
     text-align: left;
-    padding: 50px;
+    padding: 100px 20px 50px; 
+    max-width: 100%; 
+    margin: auto;
+    position: relative;
+    gap: 20px;
+    min-height: 100vh; 
+    height: auto; 
 }
+
 .resume::before {
     content: "";
     position: absolute;
@@ -199,13 +210,17 @@ section.visible {
     left: 0;
     width: 100%;
     height: 100%;
+    min-height: 100vh; 
     background: url('img/resume.jpg') no-repeat center center/cover;
-    filter: brightness(20%);  
+    background-size: cover; 
+    filter: brightness(20%);
     z-index: -1;
 }
+
 .resume div {
     width: 48%;
 }
+
 .progress-bar {
     background: #333;
     border-radius: 5px;
@@ -213,6 +228,7 @@ section.visible {
     margin-top: 5px;
     overflow: hidden;
 }
+
 .progress {
     background: #00aaff;
     height: 100%;
@@ -220,7 +236,13 @@ section.visible {
     width: 0;
     transition: width 2s ease-in-out;
 }
+
 /* seccion proyectos */
+.project-section {
+    background: #111;
+    padding: 100px 20px;
+    text-align: center;
+}
 
 .projects-container {
     display: grid;
@@ -233,7 +255,7 @@ section.visible {
 }
 
 .project-card {
-    background: linear-gradient(to right, #6b46c1, #3182ce);
+    background: linear-gradient(to right, #6b46c1, #0b0b0b);
     padding: 20px;
     border-radius: 12px;
     color: white;
@@ -245,6 +267,7 @@ section.visible {
 .project-card:hover {
     transform: scale(1.05);
 }
+
 .social-icons {
     position: fixed;
     bottom: 0px;
@@ -261,5 +284,124 @@ section.visible {
 
 .social-icons a:hover {
     transform: scale(1.2);
-    color: #00aaff; /* Color de hover */
+    color: #00aaff; 
+}
+
+/* Menú hamburguesa */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    padding: 10px;
+    position: absolute;
+    top: 15px;
+    left: 20px; 
+}
+
+.menu-toggle div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .contact-info {
+        padding: 5px;
+        font-size: 14px;
+    }
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-content {
+        width: 90%;
+    }
+
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 120px 20px 50px;
+    }
+
+    .about-text {
+        max-width: 100%;
+        padding: 40px 15px;
+        text-align: center;
+    }
+
+    .about-container img {
+        max-width: 250px;
+        margin: 20px auto;
+    }
+
+    .about-location {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .resume {
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        padding: 120px 20px 50px; 
+        min-height: 100vh; 
+        height: auto; 
+    }
+
+    .resume div {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .resume::before {
+        background-size: cover;
+        height: 100%; 
+        min-height: 100vh; 
+    }
+
+    .progress-bar {
+        width: 70%;
+        margin: auto;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .social-icons {
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
