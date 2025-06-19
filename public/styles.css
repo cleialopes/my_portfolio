@@ -1,7 +1,7 @@
 /* Estilos generales */
 body {
     height: 100%;
-    font-family: 'Poppins', sans-serif;
+    font-family: Poppins;
     color: white;
     background: #111;
     display: flex;
@@ -256,8 +256,9 @@ nav a:hover {
 
 .project-card {
     background: linear-gradient(to right, #6b46c1, #0b0b0b);
-    padding: 20px;
+    padding: 30px;
     border-radius: 12px;
+    margin: 40px;
     color: white;
     text-align: center;
     transition: transform 0.3s, background 0.5s ease;
@@ -266,6 +267,32 @@ nav a:hover {
 
 .project-card:hover {
     transform: scale(1.05);
+}
+
+.project-info ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 10px 0 20px;
+}
+
+.project-info h5 {
+    margin-top: 10px;
+    color: #00aaff;
+    font-size: 16px;
+}
+
+.project-info a {
+    display: inline-block;
+    color: #00aaff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.project-info a:hover {
+    color: #ffffff;
+    transform: scale(1.05);
+    text-decoration: underline;
 }
 
 .social-icons {
@@ -285,6 +312,30 @@ nav a:hover {
 .social-icons a:hover {
     transform: scale(1.2);
     color: #00aaff; 
+}
+
+.project-card.horizontal {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    text-align: left;
+}
+
+.project-card.horizontal .project-image img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+.project-card.horizontal .project-image img:hover{
+     transform: scale(1.03);
+
+} 
+
+.project-card.horizontal .project-info {
+    flex: 1;
 }
 
 /* Menú hamburguesa */
@@ -403,5 +454,27 @@ nav a:hover {
         bottom: 20px;
         left: 50%;
         transform: translateX(-50%);
+    }
+    
+    .project-card.horizontal {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .project-card.horizontal .project-image img {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto 20px;
+    }
+
+    .project-card.horizontal .project-info {
+        width: 100%;
+        text-align: center;
+    }
+
+    .project-info ul {
+        padding-left: 20px;
+        text-align: left;
     }
 }
